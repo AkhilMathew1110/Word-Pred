@@ -18,7 +18,7 @@ hashed_passwords = stauth.hasher(passwords).generate()
 
 authenticator = stauth.authenticate(names,usernames,hashed_passwords,'cookie_name', 'signature_key',cookie_expiry_days=30)
 
-name, authentication_status = authenticator.login('Logout','main')
+name, authentication_status = authenticator.login('Login','main')
 
 if authentication_status:
  st.sidebar.write('Welcome *%s*' % (name))
