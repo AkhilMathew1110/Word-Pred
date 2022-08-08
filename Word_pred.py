@@ -135,15 +135,21 @@ if authentication_status:
       #for i in option:
        #st.write(f"{input_text} {i}")
   #st.image('https://imageio.forbes.com/blogs-images/cognitiveworld/files/2019/06/types-of-AI.jpg?format=jpg&width=960',use_column_width=True)
-  st.markdown(
-   f"""
-   <style>
-   p {
-   background-image: url('https://imageio.forbes.com/blogs-images/cognitiveworld/files/2019/06/types-of-AI.jpg?format=jpg&width=960');
-   }
-   </style>
-   """,
-   unsafe_allow_html=True)
+  def add_bg_from_url():
+    st.markdown(
+         f"""
+         <style>
+         .stApp {{
+             background-image: url("https://imageio.forbes.com/blogs-images/cognitiveworld/files/2019/06/types-of-AI.jpg?format=jpg&width=960");
+             background-attachment: fixed;
+             background-size: cover
+         }}
+         </style>
+         """,
+         unsafe_allow_html=True
+     )
+
+   add_bg_from_url() 
 
  except Exception as e:
   print("SOME PROBLEM OCCURED")
