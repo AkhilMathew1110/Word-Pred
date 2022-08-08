@@ -6,6 +6,7 @@ from transformers import BertTokenizer, BertForMaskedLM
 
 import streamlit as st
 import streamlit_authenticator as stauth
+import streamlit.components.v1 as components
 
 st.set_page_config(page_title='Next Word Prediction Model', page_icon=None, layout='centered', initial_sidebar_state='auto')
 
@@ -133,6 +134,43 @@ if authentication_status:
       #option=st.selectbox("Predicted List is Here",answer_as_string,key="predicted_list")
       #for i in option:
        #st.write(input_text,option(i))
+       
+      component.html(
+        <div class="form-row">
+                <textarea class="form-control txt_input" id="input_text" rows="1"></textarea>
+            </div>
+
+            <h4> Predictions </h4>
+            <div class="form-row">
+                <div class="form-group col-md-2">
+                    <textarea class="form-control txt_response" id="text_bert" readonly></textarea>
+                </div>
+            </div>
+            <h4> Length of the Input Sentence </h4>
+            <div class="form-row">
+                <div class="form-group col-md-2">
+                    <textarea  id="input_length" ></textarea>
+                </div>
+            </div>
+            <h4> Length of Predicted Words Used in the Sentence </h4>
+            <div class="form-row">
+                <div class="form-group col-md-2">
+                    <textarea  id="pred_length" ></textarea>
+                </div>
+            </div>
+            <h4> List of the Predicted Words Used </h4>
+            <div class="form-row">
+                <div class="form-group col-md-2">
+                    <textarea class="form-control txt_response" id="pred_words" readonly></textarea>
+                </div>
+            </div>
+            <h4> Accuracy </h4>
+            <div class="form-row">
+                <div class="form-group col-md-2">
+                    <textarea  id="accuracy" ></textarea>
+                </div>
+            </div>
+      )
   st.image('https://imageio.forbes.com/blogs-images/cognitiveworld/files/2019/06/types-of-AI.jpg?format=jpg&width=960',use_column_width=True)
 
  except Exception as e:
