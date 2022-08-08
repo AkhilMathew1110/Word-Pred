@@ -136,7 +136,7 @@ if authentication_status:
        #st.write(input_text,option(i))
        
       component.html(
-        <div class="form-row">
+       <div class="form-row">
                 <textarea class="form-control txt_input" id="input_text" rows="1"></textarea>
             </div>
 
