@@ -131,6 +131,7 @@ if authentication_status:
 
   if st.button('Predict'):
       st.text_area("Predicted List is Here",answer_as_string,key="predicted_list")
+      st.write(accuracy)
       #option=st.selectbox("Predicted List is Here",answer_as_string,key="predicted_list")
       #for i in option:
        #st.write(input_text,option(i))
