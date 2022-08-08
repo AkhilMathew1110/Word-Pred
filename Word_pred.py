@@ -123,7 +123,7 @@ if authentication_status:
   answer = []
   acc = []
   print(res['bert'].split("\n"))
-  for i in res['bert'].split("\n"):
+  for i in res['bert'].split(" "):
   	answer.append(i)
   answer_as_string = "    ".join(answer)
 
