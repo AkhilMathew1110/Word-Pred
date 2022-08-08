@@ -129,9 +129,10 @@ if authentication_status:
 
 
   if st.button('Predict'):
-      option=st.selectbox("Predicted List is Here",answer_as_string,key="predicted_list")
-      for i in option:
-       st.write(input_text,option(i))
+      st.text_area("Predicted List is Here",answer_as_string,key="predicted_list")
+      #option=st.selectbox("Predicted List is Here",answer_as_string,key="predicted_list")
+      #for i in option:
+       #st.write(input_text,option(i))
   st.image('https://imageio.forbes.com/blogs-images/cognitiveworld/files/2019/06/types-of-AI.jpg?format=jpg&width=960',use_column_width=True)
 
  except Exception as e:
