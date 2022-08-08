@@ -148,8 +148,7 @@ if authentication_status:
          """,
          unsafe_allow_html=True
      )
-
-   add_bg_from_url() 
+  add_bg_from_url() 
 
  except Exception as e:
   print("SOME PROBLEM OCCURED")
